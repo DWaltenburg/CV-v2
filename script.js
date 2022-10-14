@@ -22,7 +22,7 @@ const hideObserver = new IntersectionObserver(entries => {
             dot.classList.remove('current');
         };
     });
-}, {threshold:0.015});
+}, {rootMargin: "-20%"});
 
 
 
