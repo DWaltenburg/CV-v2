@@ -6,10 +6,10 @@ const hideObserver = new IntersectionObserver(entries => {
 
         previndex = previndex < 0 ? 0 : previndex;
         nextindex = nextindex > 5 ? 5 : nextindex;
-        let predef = "#s"
+        let preSectionId = "#s"
 
-        let linkstringup = predef.concat(previndex);
-        let linkstringdown = predef.concat(nextindex);
+        let linkstringup = preSectionId.concat(previndex);
+        let linkstringdown = preSectionId.concat(nextindex);
         
         if (entry.isIntersecting){
             entry.target.classList.add('show');

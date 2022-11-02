@@ -5,6 +5,11 @@
     --textcolor: #ffffff;
     --highlightcolor: #343434;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--backgroundcolor);
     color: var(--textcolor);
@@ -73,6 +78,34 @@ li{
     transition: 200ms;
 }
 
+.l:nth-child(2){
+    transition-delay: 2*200ms;
+}
+.l:nth-child(3){
+    transition-delay: 4*200ms;
+}
+.l:nth-child(4){
+    transition-delay: 6*200ms;
+}
+.l:nth-child(5){
+    transition-delay: 8*200ms;
+}
+.l:nth-child(6){
+    transition-delay: 10*200ms;
+}
+.l:nth-child(7){
+    transition-delay: 12*200ms;
+}
+.l:nth-child(8){
+    transition-delay: 14*200ms;
+}
+.l:nth-child(9){
+    transition-delay: 16*200ms;
+}
+.l:nth-child(10){
+    transition-delay: 18*200ms;
+}
+
 .column {
     float: left;
 }
@@ -101,11 +134,29 @@ li{
 .up {
 transform: rotate(-135deg);
 -webkit-transform: rotate(-135deg);
+transition: 100ms;
+}
+.up:hover {
+    transition: 100ms;
+    border: solid var(--highlightcolor);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: scale(2, 2) rotate(-135deg);
 }
 
 .down {
 transform: rotate(45deg);
 -webkit-transform: rotate(45deg);
+transition: 100ms;
+}
+.down:hover {
+    transition: 100ms;
+    border: solid var(--highlightcolor);
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: scale(2, 2) rotate(45deg);
 }
 
 .vertical-center{
@@ -115,25 +166,23 @@ transform: rotate(45deg);
     transform: translateY(-50%);
 }
 
-.scrollbar li:hover{
-    font-size: larger;
-    transition: 300ms;
-    background-color: var(--backgroundcolor);
-    color: var(--highlightcolor);
-}
-
 .scrollbar {
     list-style: inside;
-    padding-left: 0;
-    transform: translateX(2px);
+    padding-left: 2px;
 }
 
 .scrollbar li {
     list-style-position: inside;
 }
 
+.scrollbar li:hover{
+    font-size: initial;
+    transition: 300ms;
+    background-color: var(--backgroundcolor);
+    color: rgb(255, 43, 43);
+}
+
 .current {
-    font-size: larger;
     transition: 300ms;
     background-color: var(--backgroundcolor);
     transform: translateX(-10px);
