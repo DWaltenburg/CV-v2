@@ -54,9 +54,18 @@ section {
     transition-delay: calc(1 * var(--delay));
 }
 
+.logo:nth-child(3) {
+    transition-delay: calc(2 * var(--delay));
+}
+
 .logo img {
     height: 100px;
 }
+
+.logo:hover {
+    /*when hovered show relevant text below image*/
+}
+
 
 /* Hide scrollbar for Chrome, Safari and Opera */
 body::-webkit-scrollbar {
