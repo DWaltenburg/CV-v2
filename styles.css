@@ -48,6 +48,7 @@ section {
 
 .logos {
     display: flex;
+    height: 130px;
 }
 
 .logo:nth-child(2) {
@@ -62,10 +63,18 @@ section {
     height: 100px;
 }
 
-.logo:hover {
-    /*when hovered show relevant text below image*/
+.logo>p {
+    margin: 0;
+    text-align: center;
 }
 
+.hide {
+    opacity: 0;
+    transition: all 400ms;
+}
+.logo:hover > .hide {
+    opacity: 1;
+  }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
 body::-webkit-scrollbar {
