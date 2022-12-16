@@ -62,10 +62,9 @@ section {
 .logo img {
     height: 100px;
 }
-p {
-    margin: 0;
-}
+
 .logo > p {
+    display: inherit;
     margin: 0;
     text-align: center;
 }
