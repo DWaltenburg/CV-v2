@@ -63,7 +63,8 @@ section {
     height: 100px;
 }
 
-.logo>p {
+.logo > p {
+    display: inherit;
     margin: 0;
     text-align: center;
 }
