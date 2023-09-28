@@ -2,10 +2,12 @@ function toggleDarkmode() {
     if (document.documentElement.getAttribute('data-bs-theme') === 'dark') {
         setTheme('light')
         localStorage.setItem('theme', 'light')
+        document.getElementById('brandlogo').src = "Images/GitHubLogo.png"
         return
     } else {
         setTheme('dark')
         localStorage.setItem('theme', 'dark')
+        document.getElementById('brandlogo').src = "Images/GitHub-Mark-Light-120px-plus.png"
         return
     }
 }
