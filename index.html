@@ -1,228 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="light">
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV - David Waltenburg</title>
-    <link rel="icon" type="image/png" href="Images/icons8-star-96.png">
-
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="script.js"></script>
+    <title>Frontpage</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script defer src="scripts.js"></script>
 </head>
 
-<body>
-    <div class="row">
-        <div class="column left">
-            <p style="color: #131316">Hacky fix/placeholder</p>
+<body id="frontpage">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><img id="brandlogo" src="Images/GitHubLogo.png" /> David Waltenburg</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../CV">CV</a>
+                    </li>
+                </ul>
+                <!-- Rounded switch -->
+                Darkmode&nbsp;&nbsp;
+                <label class="switch">
+                    <input type="checkbox" onchange="toggleDarkmode()">
+                    <span class="slider round"></span>
+                </label>
+            </div>
         </div>
-        <div class="column center">
-            <section class="hidden" id="s0">
-                <h1>CV</h1>
-                <img src="Images/Profil.jpg" alt="Profile picture">
-                <!--Need better picture in png-->
-                <p>
-                    David Waltenburg<br>
-                    4. december 2000<br>
-                    Næssundvej 172<br>
-                    9220 Aalborg Ø<br><br>
-                    + 45 41 14 12 58<br>
-                    <a href="mailto:david@waltenburg.dk" class="mail">david@waltenburg.dk</a>
-                </p>
-
-                <div class="logos">
-                    <div class="logo hidden" id="s0">
-                        <a href="https://www.linkedin.com/in/david-waltenburg" target="_blank"><img
-                                src="Images/LI-In-Bug.png" alt="LinkedIn Logo as Profile Link"></a>
-                    </div>
-                    <div class="logo hidden" id="s0">
-                        <a href="https://www.github.com/DWaltenburg" target="_blank"><img
-                                src="Images/GitHub-Mark-Light-120px-plus.png" alt="Github Logo as Profile Link"></a>
-                    </div>
-                </div>
-            </section>
-
-            <section class="hidden" id="s1">
-                <h2>Om mig</h2>
-                <p>
-                    Jeg er en ansvarsbevidst, positiv og omstillingsparat ung fyr på 22 år med en målrettet indstilling
-                    og gåpåmod over for nye udfordringer. Min bedste egenskab er mit videbegær, som hjælper mig med at
-                    være god til at lære fra mig. Jeg elsker at hjælpe andre og er derfor en god teamplayer i
-                    gruppearbejde. Gennem mine uddannelser har jeg fået meget erfaring med løsningsorienteret- og
-                    problembaseret projektarbejde både i grupper og individuelt. <br> <br>
-                    Jeg har programmeret i ca. 6 år i forskellige programmeringssprog og har mest erfaring med backend,
-                    men har også arbejdet med få frontend projekter. Jeg har været gennem en håndfuld IDEer, hvor VS
-                    Code er min favorit. Til andet udvikling har jeg brugt software til teknologier som f.eks.
-                    databaser og virtuelle maskiner.<br> <br>
-                    I min fritid er jeg fysisk aktiv og elsker at være ude i naturen med min hund. Jeg dyrker
-                    styrketræning og løber regelmæssigt. Når jeg er hjemme, kan jeg lide at spille brætspil og
-                    strategi-computerspil, men også at arbejde med min Arduino og lave 3d-print.
-
-                </p>
-            </section>
-
-            <section class="hidden" id="s2">
-                <h2>Programmeringssprog</h2>
-                <p>De 9 programmeringssprog jeg har mest erfaring med, i faldende orden</p>
-                <div class="logos">
-                    <div class="logo hidden" id="s2">
-                        <img src="Images/Language_Icons/icons8-python-480.png" alt="Python">
-                        <p class="hide">Python</p>
-                    </div>
-                    <div class="logo hidden" id="s2">
-                        <img src="Images/Language_Icons/icons8-c-programming-480.png" alt="C">
-                        <p class="hide">C</p>
-                    </div>
-                    <div class="logo hidden" id="s2">
-                        <img src="Images/Language_Icons/icons8-c++-480.png" alt="C++">
-                        <p class="hide">C++</p>
-                    </div>
-                </div>
-
-                <div class="logos">
-                    <div class="logo hidden" id="s2">
-                        <img src="Images/Language_Icons/icons8-java-480.png" alt="Java">
-                        <p class="hide">Java</p>
-                    </div>
-                    <div class="logo hidden" id="s2">
-                        <img src="Images/Language_Icons/icons8-c-sharp-logo-480.png" alt="C#">
-                        <p class="hide">C#</p>
-                    </div>
-                    <div class="logo hidden" id="s2">
-                        <img src="Images/Language_Icons/icons8-mysql-logo-480.png" alt="SQL">
-                        <p class="hide">SQL</p>
-                    </div>
-                </div>
-
-                <div class="logos">
-                    <div class="logo hidden" id="s2">
-                        <img src="Images/Language_Icons/icons8-html-5-480.png" alt="HTML">
-                        <p class="hide">HTML</p>
-                    </div>
-                    <div class="logo hidden" id="s2">
-                        <img src="Images/Language_Icons/icons8-css3-480.png" alt="CSS">
-                        <p class="hide">CSS</p>
-                    </div>
-                    <div class="logo hidden" id="s2">
-                        <img src="Images/Language_Icons/icons8-javascript-480.png" alt="Javascript">
-                        <p class="hide">Javascript</p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="hidden" id="s3">
-                <h2>Relaterede programmer</h2>
-                <p>Software jeg har brugt i forbindelse med programmering</p>
-                <ul>
-                    <div>
-                        <div class="l hidden" id="s3">
-                            <li>Visual Studio Code</li>
-                        </div>
-                        <div class="l hidden" id="s3">
-                            <li>Visual Studio 2022</li>
-                        </div>
-                        <div class="l hidden" id="s3">
-                            <li>PyCharm</li>
-                        </div>
-                        <div class="l hidden" id="s3">
-                            <li>IntelliJ IDEA</li>
-                        </div>
-                        <div class="l hidden" id="s3">
-                            <li>Arduino</li>
-                        </div>
-                        <div class="l hidden" id="s3">
-                            <li>Oracle VM VirtualBox</li>
-                        </div>
-                        <div class="l hidden" id="s3">
-                            <li>Git & Github</li>
-                        </div>
-                        <div class="l hidden" id="s3">
-                            <li>MySQL</li>
-                        </div>
-                        <div class="l hidden" id="s3">
-                            <li>Wireshark</li>
-                        </div>
-                        <div class="l hidden" id="s3">
-                            <li>PuTTY</li>
-                        </div>
-                    </div>
-
-                </ul>
-            </section>
-
-            <section class="hidden" id="s4">
-                <h2>Projekter</h2>
-                <p>Udførte projekter fra universitetet</p>
-                <ul>
-                    <div>
-                        <div class="l hidden" id="s4">
-                            <li>Automatiseret system til imødekommelse af Corona restriktioner
-                                <br>(Triangulering med WiFi signalstyrke), E20
-                            </li>
-                        </div>
-                        <div class="l hidden" id="s4">
-                            <li>Trådløs inspektion og udforskning med cameradroner
-                                <br>(Netværksprogrammering), F21
-                            </li>
-                        </div>
-                        <div class="l hidden" id="s4">
-                            <li>Detektering af mistænkelig internettrafik (IoT), E21</li>
-                        </div>
-                    </div>
-                </ul>
-            </section>
-
-            <section class="hidden" id="s5">
-                <h2>Tidslinje</h2>
-                <p>En liste over mine uddannelser og tidligere arbejde</p>
-                <ul>
-
-                    <div class="l hidden" id="s5">
-                        <li>2022-27: EUD, Data- og kommunikationsuddannelsen, <br>Datatekniker med
-                            speciale i programmering</li>
-                    </div>
-                    <div class="l hidden" id="s5">
-                        <li>2020-21: Universitet, AAU, Computerteknologi</li>
-                    </div>
-                    <div class="l hidden" id="s5">
-                        <li>2019-20: Kontormedhjælper, Aasted ApS</li>
-                    </div>
-                    <div class="l hidden" id="s5">
-                        <li>2016-19: HTX, Hillerød Tekniske Gymnasium, Mat/IT</li>
-                    </div>
-                    <div class="l hidden" id="s5">
-                        <li>2006-16: Grundskole, Frederikssund Private Realskole</li>
-                    </div>
-
-                </ul>
-            </section>
-        </div>
-        <div class="column right vertical-center">
-            <a id="uplink"><i class="arrow up"></i></a>
-            <ul class="scrollbar">
-                <a href="#s0">
-                    <li class="scrollDot"></li>
-                </a>
-                <a href="#s1">
-                    <li class="scrollDot"></li>
-                </a>
-                <a href="#s2">
-                    <li class="scrollDot"></li>
-                </a>
-                <a href="#s3">
-                    <li class="scrollDot"></li>
-                </a>
-                <a href="#s4">
-                    <li class="scrollDot"></li>
-                </a>
-                <a href="#s5">
-                    <li class="scrollDot"></li>
-                </a>
-            </ul>
-            <a id="downlink"><i class="arrow down"></i></a>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Frontpage</h1>
+                <p>Frontpage content</p>
+                <p>Se mit CV ved at klikke på 'CV' i navbaren øverst.</p>
+            </div>
         </div>
     </div>
-</body>
 
 </html>
