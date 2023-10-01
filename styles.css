@@ -1,6 +1,15 @@
 #brandlogo {
     max-height: 50px;
 }
+a.card-link {
+    text-decoration: none;
+}
+html[data-bs-theme="dark"] .card:hover {
+    background-color: #343a40;
+}
+html[data-bs-theme="light"] .card:hover {
+  background-color: #cfe2ff;
+}
 
 /* The switch - the box around the slider */
 .switch {
